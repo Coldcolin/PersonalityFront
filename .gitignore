@@ -1,0 +1,26 @@
+# React & Node.js
+node_modules/
+build/
+dist/
+.env
+.env.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+coverage/
+.DS_Store
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+logs
+*.log
+pnpm-debug.log*
+lerna-debug.log*
+
+*.local

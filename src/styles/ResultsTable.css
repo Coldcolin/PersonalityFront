@@ -1,0 +1,161 @@
+.results-table-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  color: #213547;
+}
+
+.results-table-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.search-container {
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  padding: 0.75rem 1rem;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: white;
+  color: #213547;
+  font-size: 1rem;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+  background-color: white;
+}
+
+th {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  background-color: #f4f4f4;
+  color: #213547;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.9rem;
+}
+
+.row-even {
+  background-color: #f8f8f8;
+}
+
+.row-odd {
+  background-color: white;
+}
+
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .results-table-container {
+    padding: 0.5rem;
+  }
+
+  .results-table-container h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .search-container {
+    margin-bottom: 1rem;
+  }
+
+  .search-input {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .table-container {
+    margin: 0 -0.5rem;
+    padding: 0 0.5rem;
+  }
+
+  th, td {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  /* Add horizontal scroll indicator */
+  .table-container::after {
+    content: "←  Scroll horizontally  →";
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    color: #666;
+    font-size: 0.85rem;
+    background-color: #f5f5f5;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .results-table-container {
+    color: rgba(255, 255, 255, 0.87);
+  }
+
+  .search-input {
+    background-color: #1a1a1a;
+    border-color: #333;
+    color: rgba(255, 255, 255, 0.87);
+  }
+
+  table {
+    background-color: #1a1a1a;
+  }
+
+  th {
+    background-color: #2a2a2a;
+    border-bottom-color: #333;
+    color: rgba(255, 255, 255, 0.87);
+  }
+
+  td {
+    border-bottom-color: #333;
+  }
+
+  .row-even {
+    background-color: #242424;
+  }
+
+  .row-odd {
+    background-color: #1a1a1a;
+  }
+
+  .no-results {
+    color: #999;
+  }
+
+  @media (max-width: 768px) {
+    .table-container::after {
+      background-color: #2a2a2a;
+      color: #999;
+    }
+  }
+} 
