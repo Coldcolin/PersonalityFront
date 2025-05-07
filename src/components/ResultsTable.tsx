@@ -55,7 +55,7 @@ export default function ResultsTable() {
 
   useEffect(() => {
     const filtered = users.filter(user => 
-      user.email.toLowerCase().includes(searchEmail.toLowerCase())
+      user?.email?.toLowerCase().includes(searchEmail.toLowerCase())
     );
     setFilteredUsers(filtered);
   }, [searchEmail, users]);
@@ -93,20 +93,20 @@ export default function ResultsTable() {
           <tbody>
             {filteredUsers.map((user, i) => (
               <tr key={i} className={i % 2 === 0 ? 'row-even' : 'row-odd'}>
-                <td>{user.name}</td>
-                <td>{user.email}</td>
-                <td>{user.course}</td>
-                <td>{user.result?.composites.learningPotential}%</td>
-                <td>{user.result?.composites.technicalAptitude}%</td>
-                <td>{user.result?.composites.teamworkAbility}%</td>
-                <td>{user.result?.recommendation.learningStyle}</td>
+                <td>{user?.name}</td>
+                <td>{user?.email}</td>
+                <td>{user?.course}</td>
+                <td>{user?.result?.composites?.learningPotential}%</td>
+                <td>{user?.result?.composites?.technicalAptitude}%</td>
+                <td>{user?.result?.composites?.teamworkAbility}%</td>
+                <td>{user?.result?.recommendation?.learningStyle}</td>
                 <td>
-                  {user.result?.recommendation.strengthAreas.map(s => 
+                  {user?.result?.recommendation?.strengthAreas?.map(s => 
                     s.charAt(0).toUpperCase() + s.slice(1).replace(/_/g, ' ')
                   ).join(', ')}
                 </td>
                 <td>
-                  {user.result?.recommendation.developmentAreas.map(s => 
+                  {user?.result?.recommendation?.developmentAreas?.map(s => 
                     s.charAt(0).toUpperCase() + s.slice(1).replace(/_/g, ' ')
                   ).join(', ')}
                 </td>
